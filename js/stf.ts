@@ -5,6 +5,7 @@ let elem = document.getElementById("myBar");
 let width = 0; 
 let finishTime = setInterval(frame, 1000);
 let timer = 1;
+let endTime = 90;
 let percent = document.getElementById("per");
 
 function getBaseLog(x, y) {
@@ -12,12 +13,12 @@ function getBaseLog(x, y) {
 }
 
 function frame() {
-    if (timer > 120) {
+    if (timer > endTime) {
         clearInterval(finishTime);
     }
     else{
-        timeee = 120+1-timer;
-        loga = getBaseLog(120,timeee);
+        timeee = endTime+1-timer;
+        loga = getBaseLog(endTime,timeee);
         per2 = 100+(1-(loga*100));
         
         width = per2.toFixed(0);

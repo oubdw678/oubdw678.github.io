@@ -5,6 +5,7 @@ let elem = document.getElementById("myBar");
 let width = 0; 
 let finishTime = setInterval(frame, 1000);
 let timer = 1;
+let endTime = 90;
 let percent = document.getElementById("per");
 
 function getBaseLog(x, y) {
@@ -12,11 +13,11 @@ function getBaseLog(x, y) {
 }
 
 function frame() {
-    if (timer > 120) {
+    if (timer > endTime) {
         clearInterval(finishTime);
     }
     else{
-        per2 = (Math.log(timer)/Math.log(120))*100;
+        per2 = (Math.log(timer)/Math.log(endTime))*100;
         width = per2.toFixed(0); 
         elem.style.width = width + '%';
         // console.log(timer+" "+width);

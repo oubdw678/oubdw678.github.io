@@ -1,10 +1,10 @@
 .container{
     text-align: -webkit-center;
-    padding-top: 15%;
 }
 .progress{
     height: 30px;
     background-color: #ddd;
+    margin-top: 15%;
 }
 .progress-small{
     width: 100px;

@@ -5,17 +5,18 @@ var elem = document.getElementById("myBar");
 var width = 0;
 var finishTime = setInterval(frame, 1000);
 var timer = 1;
+var endTime = 90;
 var percent = document.getElementById("per");
 function getBaseLog(x, y) {
     return Math.log(y) / Math.log(x);
 }
 function frame() {
-    if (timer > 120) {
+    if (timer > endTime) {
         clearInterval(finishTime);
     }
     else {
-        timeee = 120 + 1 - timer;
-        loga = getBaseLog(120, timeee);
+        timeee = endTime + 1 - timer;
+        loga = getBaseLog(endTime, timeee);
         per2 = 100 + (1 - (loga * 100));
         width = per2.toFixed(0);
         if (width > 100) {
